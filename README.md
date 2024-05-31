@@ -1,0 +1,1 @@
+Funkcja generująca sześcian (znajduje się na końcu script.js)

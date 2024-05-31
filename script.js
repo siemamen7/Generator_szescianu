@@ -110,7 +110,7 @@ const Cube = function () {
 
     const boxVertBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, boxVertBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, generateCube(0.0, 0.0, 0.0, 1.0), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, generateCube([0.0, 0.0, 0.0], 1.0), gl.STATIC_DRAW);
     
     const posAttribLocation = gl.getAttribLocation(program, 'vertPosition');
     gl.vertexAttribPointer(
@@ -193,7 +193,7 @@ function checkLink(gl, program) {
     }
 }
 
-function generateCube(x, y, z, size) {
+function generateCube([x, y, z], size) {
     const vertices = [
         // Top
         -1.0, 1.0, -1.0,
