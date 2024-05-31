@@ -1,4 +1,3 @@
-import { generateCube } from "./generateCube.js";
 const vertexShaderTxt = `
     precision mediump float;
 
